@@ -1,0 +1,23 @@
+select FirstName, MailingCity, Salutation, LastName from Contact where ((MailingCity like :'%tom%') or (Salutation like :'%tom%') or (FirstName like :'%tom%') or (LastName like :'%tom%')) and (AccountId in ('0015000000VQ9fCAAT', '0015000000YqdJVAAZ', '0015000000mjYjgAAE', '0015000000VQ9fEAAT')) order by Name limit 50
+
+
+soql= select mailinglatitude, jigsaw, leadsource, createdbyid, dateofhire__c, geddiploma__c, otherphone, terminationdate__c, isdeleted, hoursworkedperweek__c, yeargraduatedfromcollege__c, systemmodstamp, assistantphone, dateoffulltimehire__c, isemailbounced, yeargraduatedfromgraduateschool__c, otherstreet, dateofearningsincrease__c, hasoptedoutofemail, mailingaddress__c, createddate, earnings__c, ownerid, jigsawcontactid, spouse__c, accountname__c, bankroutingnumber__c, bankaccountnumber__c, othercity, lastmodifiedbyid, reportstoid, photourl, lastcurequestdate, lastname, graduateschoolmajor__c, dateofretirement__c, socialsecuritynumber__c, mobilephone, mailingcountry, mailinglongitude, bankaccounttype__c, title, emailbounceddate, mailingstreet, homephone, emailbouncedreason, firstname, speciality__c, assistantname, salutation, highestgradecompleted__c, phone, otherstate, earningsperiod__c, bankphone__c, degree__c, testing__c, lastactivitydate, maritalstatus__c, description, parent__c, highschooldiploma__c, terminationreason__c, fax, paymentmethod__c, gender__c, hasoptedoutoffax, lastcuupdatedate, collegemajor__c, email, donotcall, employeeidentificationnumber__c, mailingstate, employee__c, bonus__c, department, taxidnumber__c, yeargraduatedfromhighschool__c, otherlongitude, maidenname__c, lastmodifieddate, id, employed__c, otherlatitude, name, birthdate, age__c, accountid, masterrecordid, otherpostalcode, mailingpostalcode, occupationaldescription__c, bonusperiod__c, workstate__c, othercountry, mailingcity, bankname__c from Contact where ((MailingCity like %howard%) or (Salutation like %howard%) or (FirstName like %howard%) or (LastName like %howard%)) order by Name limit 50
+
+select (all contact fields...)
+from Contact 
+where ((MailingCity like :likeText) 
+or (Salutation like :likeText) 
+or (FirstName like :likeText)
+or (LastName like :likeText)) 
+and (AccountId in ('0015000000VQ9fCAAT', '0015000000YqdJVAAZ', '0015000000mjYjgAAE', '0015000000VQ9fEAAT')) 
+order by Name 
+limit 50
+
+SELECT Name, Salutation 
+FROM Contact 
+WHERE Name like '%"+searchTerm+"%' 
+OR Salutation like '%"+searchTerm+"%'
+
+
+
+
